@@ -1,0 +1,32 @@
+services:
+
+- type: web
+  name: adminBackend
+  env: docker
+  repo: https://github.com/marcperrinp/livedemo.git
+  # dockerCommand: ./webdis.sh 
+  envVars:
+  - key: DATABASE_SCHEMA
+    value: public
+  - key: DATABASE_SSL
+    value: false
+  - key: DATABASE_URL
+    fromDatabase:
+    name: livedemoDatabase
+    property: connectionString
+  - key: APP_NAME
+    value: livedemo0001XAIUYZX
+  - key: FOREST_EMAIL
+    value: marcp@forestadmin.com
+  - key: FOREST_TOKEN
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImRhdGEiOnsidHlwZSI6InVzZXJzIiwiaWQiOiIxOTc4MCIsImF0dHJpYnV0ZXMiOnsiZmlyc3RfbmFtZSI6Ik1hcmMiLCJsYXN0X25hbWUiOiJQZXJyaW4tUGVsbGV0aWVyIiwiZW1haWwiOiJtYXJjcEBmb3Jlc3RhZG1pbi5jb20ifX19LCJpYXQiOjE2MDQzMjMyMzQsImV4cCI6MTYwNDQ5NjAzNCwiYXVkIjoiRk9SRVNUX1VTRVJTIiwiaXNzIjoiRk9SRVNUX0FVVEhFTlRJQ0FUSU9OX1NZU1RFTSJ9.58AdLyIUe9YQQK3_cmsQMQ9iTPZ3oBMHfqF-AlYviWA
+  - key: APPLICATION_HOST
+    value: localhost
+  - key: APPLICATION_PORT
+    value: 3310
+
+databases:
+- name: livedemoDatabase
+  databaseName: livedemoDatabase
+  user: forest
+
