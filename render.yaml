@@ -1,7 +1,7 @@
 services:
 
 - type: web
-  name: adminBackend
+  name: admin backend
   env: docker
   repo: https://github.com/marcperrinp/livedemo.git
   # dockerCommand: ./webdis.sh 
@@ -26,7 +26,7 @@ services:
     value: 3310
 
 databases:
-- name: livedemoDatabase
-  databaseName: livedemoDatabase
+- name: livedemo database
+  databaseName: livedemo_database
   user: forest
 
