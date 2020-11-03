@@ -12,7 +12,7 @@ services:
     value: false
   - key: DATABASE_URL
     fromDatabase:
-    name: livedemoDatabase
+    name: livedemo_database
     property: connectionString
   - key: APP_NAME
     value: livedemo0001XAIUYZX
