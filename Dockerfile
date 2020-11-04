@@ -6,7 +6,7 @@ RUN npm install -g lumber-cli -s
 VOLUME /usr/src/app
 
 EXPOSE $APPLICATION_PORT
-RUN lumber generate "$APP_NAME" \
+RUN lumber generate livedemo0002XAIUYZX \
     -c "$DATABASE_URL" \
     -S "$DATABASE_SSL" \
     -s "$DATABASE_SCHEMA" \
