@@ -13,7 +13,7 @@ RUN lumber generate $APP_NAME \
     -H $APPLICATION_HOST \
     -p $APPLICATION_PORT \
     --email $FOREST_EMAIL \
-    --token $FOREST_TOKEN && \
+    --token ${FOREST_TOKEN} && \
   cd $APP_NAME && \
   npm install -s
 
